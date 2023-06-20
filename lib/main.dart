@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_rides/screens/during_ride_screen.dart';
 import 'package:p_rides/screens/forgot_password/change_password_screen.dart';
 import 'package:p_rides/screens/driver_reg/registeration_five.dart';
 import 'package:p_rides/screens/driver_reg/registeration_four.dart';
@@ -9,12 +10,17 @@ import 'package:p_rides/screens/driver_reg/registeration_three.dart';
 import 'package:p_rides/screens/driver_reg/registeration_two.dart';
 import 'package:p_rides/screens/forgot_password/forgot_password_screen.dart';
 import 'package:p_rides/screens/location_screen.dart';
+import 'package:p_rides/screens/modeOfPayment_Screen.dart';
 import 'package:p_rides/screens/onboarding_screen.dart';
 import 'package:p_rides/screens/otp/otp_screen_passenger.dart';
+import 'package:p_rides/screens/ride_detail_2.dart';
+import 'package:p_rides/screens/ride_details_screen.dart';
 import 'package:p_rides/screens/sign_up/signup_screen.dart';
 import 'package:p_rides/screens/signing/signing_as_driver.dart';
 import 'package:p_rides/screens/signing/signing_as_passenger.dart';
 import 'package:p_rides/screens/signing/signing_screen.dart';
+import 'package:p_rides/screens/tip_driver_screen.dart';
+import 'package:p_rides/screens/trip_details_screen.dart';
 import './screens/splash_screen.dart';
 import 'screens/driver_reg/registeration_eight.dart';
 import 'screens/forgot_password/otp_change_password.dart';
@@ -23,6 +29,8 @@ import 'screens/home_two.dart';
 import 'screens/otp/otp_screen_driver.dart';
 import 'screens/sign_up/sign_up_driver.dart';
 import 'screens/sign_up/sign_up_passenger.dart';
+import './screens/search_screen.dart';
+import './screens/book_ride.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -36,12 +44,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: Colors.black),
         ),
       ),
-      home: const Scaffold(
+      home: Scaffold(
         body: SplashScreen(),
       ),
       routes: {
@@ -69,6 +78,14 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => HomeScreen(),
         HomeTwo.routeName: (context) => const HomeTwo(),
         LocationScreen.routeName: (context) => const LocationScreen(),
+        SearchScreen.routeName: (context) => SearchScreen(),
+        BookRideScreen.routeName: (context) => BookRideScreen(),
+        ModeOfPayment.routeName: (context) => ModeOfPayment(),
+        DuringRideScreen.routeName: (context) => DuringRideScreen(),
+        TripDetails.routeName: (context) => TripDetails(),
+        TipDriver.routeName: (context) => TipDriver(),
+        RideDetails.routeName: (context) => RideDetails(),
+        RideDetails2.routeName: (context) => RideDetails2(),
       },
     );
   }
