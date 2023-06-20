@@ -5,6 +5,7 @@ import 'home_two.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home-screen';
+
   HomeScreen({super.key});
 
   final GlobalKey<ScaffoldState> _key = GlobalKey();
@@ -13,7 +14,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _key,
-      // drawer: AppDrawer(),
       // drawer: AppDrawer(),
       body: Stack(
         children: [
@@ -55,6 +55,7 @@ class HomeScreen extends StatelessWidget {
                       'Where are you?',
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
+                        fontFamily: 'Raleway',
                         fontSize: 30,
                       ),
                     ),
@@ -66,6 +67,8 @@ class HomeScreen extends StatelessWidget {
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontSize: 16,
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                     const SizedBox(
@@ -76,7 +79,14 @@ class HomeScreen extends StatelessWidget {
                       height: 55.62,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: const Text('Set automatically'),
+                        child: const Text(
+                          'Set automatically',
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                          ),
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -98,7 +108,12 @@ class HomeScreen extends StatelessWidget {
                         },
                         child: const Text(
                           'Set later',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
